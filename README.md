@@ -5,6 +5,7 @@
 
 * Docker installed on dev machine.
 * IntelliJ IDEA installed.
+* Docker plugin for IntelliJ.
 
 
 ### Running Locally
