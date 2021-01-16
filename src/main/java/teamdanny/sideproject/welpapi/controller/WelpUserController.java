@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import teamdanny.sideproject.welpapi.Service.WelpUserService;
 import teamdanny.sideproject.welpapi.model.WelpUser;
 
+import javax.validation.Valid;
+
 
 @RestController
 @RequiredArgsConstructor
@@ -18,7 +20,7 @@ public class WelpUserController {
     private final WelpUserService welpUserService;
 
     @PostMapping("/register")
-    public ResponseEntity<Void> register(@RequestBody WelpUser user) {
+    public ResponseEntity<Void> register(@RequestBody @Valid WelpUser user) {
         try {
             welpUserService.register(user);
             return new ResponseEntity<>(HttpStatus.CREATED);

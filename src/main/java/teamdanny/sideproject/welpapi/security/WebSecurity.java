@@ -1,4 +1,4 @@
-package teamdanny.sideproject.welpapi.jwt;
+package teamdanny.sideproject.welpapi.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;

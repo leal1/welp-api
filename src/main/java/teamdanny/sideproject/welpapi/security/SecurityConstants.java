@@ -1,4 +1,4 @@
-package teamdanny.sideproject.welpapi.jwt;
+package teamdanny.sideproject.welpapi.security;
 
 public class SecurityConstants {
     public static final String SECRET = "SECRET_KEY";

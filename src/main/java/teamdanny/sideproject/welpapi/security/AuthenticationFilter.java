@@ -1,4 +1,4 @@
-package teamdanny.sideproject.welpapi.jwt;
+package teamdanny.sideproject.welpapi.security;
 
 import com.auth0.jwt.JWT;
 import lombok.RequiredArgsConstructor;

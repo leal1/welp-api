@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class WelpApiApplication {
 	@Bean
-	private BCryptPasswordEncoder bCryptPasswordEncoder(){
-		return 	bCryptPasswordEncoder();
+	public BCryptPasswordEncoder bCryptPasswordEncoder(){
+		return new BCryptPasswordEncoder();
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(WelpApiApplication.class, args);
