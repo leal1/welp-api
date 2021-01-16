@@ -27,7 +27,6 @@ public class WelpUser {
    @NotNull(message="username cannot be null")
     private String username;
     @NotNull(message="password cannot be null")
-    @Size(min =5, max = 20, message="password needs to be between 5 and 20 characters")
     private String password;
 
 }

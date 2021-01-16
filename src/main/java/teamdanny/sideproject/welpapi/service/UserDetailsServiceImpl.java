@@ -1,4 +1,4 @@
-package teamdanny.sideproject.welpapi.Service;
+package teamdanny.sideproject.welpapi.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

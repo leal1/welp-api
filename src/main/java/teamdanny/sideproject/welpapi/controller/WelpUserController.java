@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import teamdanny.sideproject.welpapi.Service.WelpUserService;
+import teamdanny.sideproject.welpapi.service.WelpUserService;
 import teamdanny.sideproject.welpapi.model.WelpUser;
 
 import javax.validation.Valid;
@@ -20,13 +20,13 @@ public class WelpUserController {
     private final WelpUserService welpUserService;
 
     @PostMapping("/register")
-    public ResponseEntity<Void> register(@RequestBody @Valid WelpUser user) {
+    public ResponseEntity<String> register(@RequestBody @Valid WelpUser user) {
         try {
             welpUserService.register(user);
-            return new ResponseEntity<>(HttpStatus.CREATED);
+            return new ResponseEntity<>("",HttpStatus.CREATED);
         }
         catch(IllegalArgumentException ex) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
         catch(Exception ex) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
